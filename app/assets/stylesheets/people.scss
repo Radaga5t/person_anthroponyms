@@ -1,0 +1,23 @@
+// Place all the styles related to the People controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+// FORM STYLES
+.form-container {
+  display: grid;
+  justify-items: center;
+}
+
+.actions {
+  display: grid;
+  max-width: 400px;
+
+  .button-submit {
+    margin-top: 1em;
+  }
+
+  input {
+    margin-bottom: 1em;
+  }
+}
+

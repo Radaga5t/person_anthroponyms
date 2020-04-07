@@ -1,0 +1,34 @@
+<%= form_with model: @person do |f| %>
+  <% if person.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(person.errors.count, "error") %> prohibited this person from being saved:</h2>
+
+      <ul>
+        <% person.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= label :person_first_name, "First name" %>
+    <%= f.text_field :first_name %>
+
+    <%= label :person_last_name, "Last name" %>
+    <%= f.text_field :last_name %>
+
+    <%= label :person_middle_name, "Middle name" %>
+    <%= f.text_field :middle_name %>
+
+    <div>
+      <%= f.radio_button :sex, :male, checked: true %>
+      <%= label :person_sex, "Male" %>
+
+      <%= f.radio_button :sex, :female %>
+      <%= label :person_sex, "Female" %>
+    </div>
+    
+    <%= f.submit "Create", class: "button-submit" %>
+  </div>
+<% end %>
