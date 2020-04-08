@@ -1,4 +1,60 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>
+<% if @person.present? %>
+  <div class='table-wrapper'>
+    <div class='table-header'>
+      <p>Name form / Word case</p>
+      <p>Last name</p>
+      <p>First name</p>
+      <p>Middle name</p>
+      <p>Full name</p>
+    </div>
+    <div class='names-container'>
+      <p>Nominative</p>
+      <p><%= @person.lastname %></p>
+      <p><%= @person.firstname %></p>
+      <p><%= @person.middlename %></p>
+      <p><%= @person.fullname %></p>
+
+      <%# Genitive %>
+      <p>Genitive</p>
+      <p><%= @person.person_case.lastname_genitive %></p>
+      <p><%= @person.person_case.firstname_genitive %></p>
+      <p><%= @person.person_case.middlename_genitive %></p>
+      <p><%= @person.person_case.fullname_genitive %></p>
+
+      <%# Dative %>
+      <p>Dative</p>
+      <p><%= @person.person_case.lastname_dative %></p>
+      <p><%= @person.person_case.firstname_dative %></p>
+      <p><%= @person.person_case.middlename_dative %></p>
+      <p><%= @person.person_case.fullname_dative %></p>
+
+      <%# Accusative %>
+      <p>Accusative</p>
+      <p><%= @person.person_case.lastname_accusative %></p>
+      <p><%= @person.person_case.firstname_accusative %></p>
+      <p><%= @person.person_case.middlename_accusative %></p>
+      <p><%= @person.person_case.fullname_accusative %></p>
+
+      <%# Instrumental %>
+      <p>Instrumental</p>
+      <p><%= @person.person_case.lastname_instrumental %></p>
+      <p><%= @person.person_case.firstname_instrumental %></p>
+      <p><%= @person.person_case.middlename_instrumental %></p>
+      <p><%= @person.person_case.fullname_instrumental %></p>
+
+      <%# Prepositional %>
+      <p>Prepositional</p>
+      <p><%= @person.person_case.lastname_prepositional %></p>
+      <p><%= @person.person_case.firstname_prepositional %></p>
+      <p><%= @person.person_case.middlename_prepositional %></p>
+      <p><%= @person.person_case.fullname_prepositional %></p>
+    </div>
+  </div>  
+<% end %>
+
+<div>
+  <%= link_to 'Edit', edit_person_path(@person), class: 'edit-action' %>
+  <%= link_to 'Back', people_path %>
+</div>

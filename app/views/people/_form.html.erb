@@ -12,14 +12,14 @@
   <% end %>
 
   <div class="actions">
-    <%= label :person_first_name, "First name" %>
-    <%= f.text_field :first_name %>
+    <%= label :person_lastname, "Last name" %>
+    <%= f.text_field :lastname %>
 
-    <%= label :person_last_name, "Last name" %>
-    <%= f.text_field :last_name %>
+    <%= label :person_firstname, "First name", required: true %>
+    <%= f.text_field :firstname %>
 
-    <%= label :person_middle_name, "Middle name" %>
-    <%= f.text_field :middle_name %>
+    <%= label :person_middlename, "Middle name" %>
+    <%= f.text_field :middlename %>
 
     <div>
       <%= f.radio_button :sex, :male, checked: true %>
@@ -29,6 +29,6 @@
       <%= label :person_sex, "Female" %>
     </div>
     
-    <%= f.submit "Create", class: "button-submit" %>
+    <%= f.submit class: "button-submit" %>
   </div>
 <% end %>

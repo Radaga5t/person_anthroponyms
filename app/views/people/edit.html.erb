@@ -3,8 +3,8 @@
 
   <%= render 'form', person: @person %>
 
-  <div>
-  <%= link_to 'Show', @person %> |
-  <%= link_to 'Back', people_path %>
+  <div class='navigation'>
+    <%= link_to 'Show', @person, class: 'back-link' %>
+    <%= link_to 'Back', people_path, class: 'show-link' %>
   </div>
 </div>

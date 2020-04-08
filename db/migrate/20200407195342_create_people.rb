@@ -5,10 +5,10 @@ class CreatePeople < ActiveRecord::Migration[6.0]
     create_table :people do |t|
       t.references :person_case
 
-      t.string :first_name
-      t.string :last_name
-      t.string :middle_name
-      t.string :full_name
+      t.string :firstname
+      t.string :lastname
+      t.string :middlename
+      t.string :fullname
       t.integer :sex, default: 0
 
       t.timestamps

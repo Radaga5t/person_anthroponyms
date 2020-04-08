@@ -2,26 +2,17 @@
 
 <h1>People</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @people.each do |person| %>
-      <tr>
-        <td><%= link_to person.full_name, person %></td>
-        <td><%= person.sex.capitalize %></td>
-        <td><%= link_to 'Show', person %></td>
-        <td><%= link_to 'Edit', edit_person_path(person) %></td>
-        <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Person', new_person_path %>
+<div class='list-container'>
+  <% @people.each do |person| %>
+    <div class='list-item'>
+      <%= link_to person.fullname, person, class: 'item-fio' %>
+      <span class='item-sex'><%= person.sex.capitalize %></span>
+      <div class='item-actions'>
+        <%= link_to 'Show', person, class: 'show-action' %>
+        <%= link_to 'Edit', edit_person_path(person), class: 'edit-action' %>
+        <%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' }, class: 'destroy-action' %>
+      </div>
+    </div>
+  <% end %>
+  <%= link_to 'New Person', new_person_path, class: 'new-action' %>
+</div>

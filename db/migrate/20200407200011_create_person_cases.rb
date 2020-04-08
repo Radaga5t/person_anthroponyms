@@ -5,29 +5,29 @@ class CreatePersonCases < ActiveRecord::Migration[6.0]
     create_table :person_cases do |t|
       t.references :person
 
-      t.string :first_name_genitive
-      t.string :first_name_dative
-      t.string :first_name_accusative
-      t.string :first_name_instrumental
-      t.string :first_name_prepositional
+      t.string :firstname_genitive
+      t.string :firstname_dative
+      t.string :firstname_accusative
+      t.string :firstname_instrumental
+      t.string :firstname_prepositional
 
-      t.string :last_name_genitive
-      t.string :last_name_dative
-      t.string :last_name_accusative
-      t.string :last_name_instrumental
-      t.string :last_name_prepositional
+      t.string :lastname_genitive
+      t.string :lastname_dative
+      t.string :lastname_accusative
+      t.string :lastname_instrumental
+      t.string :lastname_prepositional
 
-      t.string :middle_name_genitive
-      t.string :middle_name_dative
-      t.string :middle_name_accusative
-      t.string :middle_name_instrumental
-      t.string :middle_name_prepositional
+      t.string :middlename_genitive
+      t.string :middlename_dative
+      t.string :middlename_accusative
+      t.string :middlename_instrumental
+      t.string :middlename_prepositional
 
-      t.string :full_name_genitive
-      t.string :full_name_dative
-      t.string :full_name_accusative
-      t.string :full_name_instrumental
-      t.string :full_name_prepositional
+      t.string :fullname_genitive
+      t.string :fullname_dative
+      t.string :fullname_accusative
+      t.string :fullname_instrumental
+      t.string :fullname_prepositional
 
       t.timestamps
     end

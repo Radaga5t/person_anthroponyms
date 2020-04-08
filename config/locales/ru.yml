@@ -1,0 +1,5 @@
+ru:
+  person_first_name: 'Имя'
+  person_last_name: 'Фамилия'
+  person_middle_name: 'Отчество'
+  person_sex: 'Пол'
